@@ -1,5 +1,4 @@
 console.log("script.js loaded");
-let endpoint = "https://api.giphy.com/v1/gifs/search?api_key=DdoeyWowjJgDqhustN7kKkmOxNIWVTlk&q=apple&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips";
 
 // Select container and button elements
 const gifContainer = document.querySelector('#gif-container');
@@ -11,7 +10,7 @@ let images = [];
 // Function to fetch GIFs from GIPHY API
 async function fetchGIFs() {
   const searchTerm = 'apple'; // or any search term
-  const url = `https://api.giphy.com/v1/gifs/search?api_key=DdoeyWowjJgDqhustN7kKkmOxNIWVTlk&q=${searchTerm}&limit=10&offset=0&rating=g&lang=en`;
+  const endpoint = `https://api.giphy.com/v1/gifs/search?api_key=DdoeyWowjJgDqhustN7kKkmOxNIWVTlk&q=${searchTerm}&limit=10&offset=0&rating=g&lang=en`;
 
   // good practice to try and catch if something goes wrong(?)
   try {
